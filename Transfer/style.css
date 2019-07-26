@@ -59,10 +59,17 @@ p {
 }
 
 /* Link default style*/
-a {
+a:link,
+a:visited {
   text-decoration: none;
   color: var(--gray-2);
   font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+a:hover,
+a:visited {
+  color: var(--gray-1);
 }
 
 /* Span default style*/
@@ -115,7 +122,8 @@ header {
   margin-bottom: var(--margin-8);
 }
 
-.text-box__link {
+.text-box__link:link,
+.text-box__link:visited {
   background: #00cec9;
   font-size: 1.1rem;
   color: #fff;
@@ -123,4 +131,10 @@ header {
   letter-spacing: 0.2rem;
   padding: 1.5rem 4rem;
   border-radius: 1111rem;
+  transition: background 0.5s;
+}
+
+.text-box__link:hover,
+.text-box__link:active {
+  background: #00ada8;
 }
