@@ -186,6 +186,7 @@ header {
     position: fixed;
     top: 0rem;
     right: 5%;
+    background: none;
   }
 
   .nav__menu-button.active,
