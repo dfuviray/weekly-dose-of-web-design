@@ -1,4 +1,7 @@
 :root {
+  --green-1: #00cec9;
+  --green-2: #00ada8;
+
   --gray-1: rgba(0, 0, 0, 0.8);
   --gray-2: rgba(0, 0, 0, 0.65);
   --gray-3: rgba(0, 0, 0, 0.5);
@@ -31,14 +34,31 @@ body {
   font-weight: 300;
   line-height: 1.6;
   background-image: url("img/background.svg");
-  background-position: right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain;
-  height: calc(100vh - var(--margin-2));
 }
 
+@media only screen and (max-width: 1024px) {
+  body {
+    background-size: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  body {
+    background-size: 70%;
+  }
+}
 .container {
   max-width: 90%;
+  height: calc(100vh - (var(--margin-2) * 2));
   margin: var(--margin-2) auto;
 }
 
@@ -61,6 +81,7 @@ p {
 /* Link default style*/
 a:link,
 a:visited {
+  display: inline-block;
   text-decoration: none;
   color: var(--gray-2);
   font-size: 1.6rem;
@@ -78,6 +99,8 @@ span {
 }
 
 header {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -99,32 +122,182 @@ header {
   justify-content: flex-start;
 }
 
-.nav .nav__item:last-child {
+.nav__menu {
+  display: none;
+}
+
+.nav__menu-button {
+  position: fixed;
+  top: 4.4rem;
+  right: 5%;
+  padding: calc(4rem - 0.3rem * 3);
+}
+
+.nav__menu-button span {
+  position: relative;
+  top: 50%;
+  width: 2rem;
+  height: 0.3rem;
+  transform: translateY(-50%);
+  background: var(--gray-2);
+  border-radius: 1111px;
+  transition: background 1s;
+}
+
+.nav__menu-button span::before {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0.5rem;
+  width: 2rem;
+  height: 0.3rem;
+  background: var(--gray-2);
+  border-radius: 1111px;
+  transition: background 1s;
+}
+
+.nav__menu-button span::after {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0.7rem;
+  width: 2rem;
+  height: 0.3rem;
+  background: var(--gray-2);
+  border-radius: 1111px;
+  transition: background 1s;
+}
+
+.nav .nav__item a {
+  padding: 0 1.2rem;
+  display: inline-block;
+}
+
+.nav .nav__item:last-child a {
   padding: 0;
 }
 
-.nav__item {
-  padding: 0 1rem;
+/* Navigation for smaller device */
+@media only screen and (max-width: 768px) {
+  .nav__menu {
+    display: block;
+  }
+  .nav__menu-button {
+    position: fixed;
+    top: 0rem;
+    right: 5%;
+  }
+
+  .nav__menu-button.active,
+  .nav__menu-button:hover {
+    background: var(--green-1);
+  }
+
+  .nav__menu-button:hover span,
+  .nav__menu-button:hover span::before,
+  .nav__menu-button:hover span::after,
+  .nav__menu-button.active span,
+  .nav__menu-button.active span::before,
+  .nav__menu-button.active span::after {
+    background: #fff;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    width: 24.1rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1111;
+    background-color: #fff;
+    box-shadow: 1rem 2rem 3rem 0 rgba(0, 0, 0, 0.3);
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .nav .nav__item a,
+  .nav .nav__item:last-child a {
+    padding: 2rem 2rem;
+    margin: 0.1rem 0rem;
+    width: calc(100% - (2rem * 2));
+  }
+
+  .nav__item.active a {
+    background: var(--green-1);
+    color: #fff;
+  }
+
+  .nav .nav__item a:hover {
+    background: var(--green-1);
+    color: #fff;
+  }
 }
 
 /* Text-box */
 .text-box {
   position: absolute;
+  width: 100%;
+  top: 50%;
   left: 0;
-  top: 19rem;
+  transform: translate(0, -50%);
+}
+
+@media only screen and (max-width: 320px) {
+  .text-box {
+    text-align: center;
+  }
 }
 
 .text-box__heading {
   margin-bottom: var(--margin-2);
 }
 
+@media only screen and (max-width: 568px) {
+  .text-box__heading {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .text-box__heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .text-box__heading {
+    font-size: 2.3rem;
+  }
+}
+
 .text-box__paragraph {
   margin-bottom: var(--margin-8);
 }
 
+@media only screen and (max-width: 568px) {
+  .text-box__paragraph {
+    font-size: 1.3rem;
+    margin-bottom: var(--margin-6);
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .text-box__paragraph {
+    font-size: 1rem;
+  }
+}
+
 .text-box__link:link,
 .text-box__link:visited {
-  background: #00cec9;
+  background: var(--green-1);
   font-size: 1.1rem;
   color: #fff;
   text-transform: uppercase;
@@ -136,5 +309,19 @@ header {
 
 .text-box__link:hover,
 .text-box__link:active {
-  background: #00ada8;
+  background: var(--green-2);
+}
+
+@media only screen and (max-width: 568px) {
+  .text-box__link:link,
+  .text-box__link:visited {
+    padding: 1.2rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .text-box__link:link,
+  .text-box__link:visited {
+    font-size: 1rem;
+  }
 }
