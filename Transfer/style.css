@@ -53,7 +53,7 @@ body {
 
 @media only screen and (max-width: 365px) {
   body {
-    background-size: 70%;
+    background-size: 50%;
   }
 }
 .container {
@@ -205,6 +205,7 @@ header {
 
   nav {
     display: none;
+    z-index: 1111;
   }
 
   nav.active {
@@ -229,6 +230,10 @@ header {
     padding: 2rem 2rem;
     margin: 0.1rem 0rem;
     width: calc(100% - (2rem * 2));
+  }
+
+  .nav .nav__item:first-child a {
+    margin: 0rem;
   }
 
   .nav__item.active a {

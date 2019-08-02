@@ -19,6 +19,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 300;
+  height: 100%;
 }
 
 /* ELEMENTS GLOBAL DEFAULT STYLES */
@@ -53,15 +55,29 @@ button {
 
 /* container */
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
+  height: 100%;
+}
+
+@media only screen and (max-width: 414px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* PRODUCT SECTION*/
 .product {
   width: 50%;
+  height: 100%;
   position: relative;
+}
+
+@media only screen and (max-width: 414px) {
+  .product {
+    width: 100%;
+    height: 50vh;
+  }
 }
 
 /* Logo */
@@ -85,6 +101,17 @@ button {
   background-size: cover;
 }
 
+.product__image.active {
+  animation: show-in 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 414px) {
+  .product__image {
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
 /* Navigation */
 .navigation {
   position: absolute;
@@ -99,6 +126,12 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   transition: transform 1s;
+}
+
+@media only screen and (max-width: 767px) {
+  .navigation__btn {
+    padding: 1rem 2rem;
+  }
 }
 
 .navigation__btn:hover {
@@ -116,13 +149,62 @@ button {
 
 /* Content */
 .content {
-  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: calc(50% - 12rem);
+  height: calc(100vh - 6rem);
   padding: 3rem 6rem;
-  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    width: calc(50% - 6rem);
+    padding: 3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .content {
+    top: 0;
+    left: 0;
+    width: calc(100% - 4rem);
+    height: calc(100vh - 100%);
+    padding: 3rem 2rem;
+  }
 }
 
 .menu-bar {
-  margin-bottom: 14rem;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  width: calc(50% - 6rem);
+  padding-left: 6rem;
+  z-index: 1111;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-bar {
+    width: calc(50% - 3rem);
+    padding-left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .menu-bar {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 24rem;
+    padding-left: 0;
+    background: #fff;
+    transform: translate3d(-27rem, 0, 0);
+    transition: all 0.5s cubic-bezier(0.61, 0.03, 0, 1.83);
+  }
+  .menu-bar.active {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .menu {
@@ -131,8 +213,39 @@ button {
   list-style-type: none;
 }
 
+.menu .menu__item:last-child {
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 414px) {
+  .menu-bar .menu {
+    flex-direction: column;
+  }
+}
+
 .menu__item {
   padding-right: 6.5rem;
+}
+@media only screen and (max-width: 767px) {
+  .menu__item {
+    padding-right: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu__item {
+    padding-right: 3rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .menu__item {
+    padding: 2rem 2rem;
+    background: #f39c12;
+    margin-bottom: 0.1rem;
+  }
 }
 
 .menu__item a:hover {
@@ -147,12 +260,54 @@ button {
   color: var(--black-3);
 }
 
+.text-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 414px) {
+  .text-container {
+    top: 0;
+    transform: translateY(0);
+  }
+}
+
 .title {
   font-family: Ubuntu, "arial", sans-serif;
   font-size: 4.7rem;
   color: var(--black-1);
   line-height: 1.2;
   margin-bottom: 3rem;
+}
+
+.title span {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 3.1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .title {
+    font-size: 3.2rem;
+  }
 }
 
 .sub-title {
@@ -163,6 +318,36 @@ button {
 }
 .sub-title span {
   display: block;
+}
+
+@media only screen and (max-width: 900px) {
+  .sub-title {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sub-title {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .sub-title {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .sub-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .sub-title {
+    font-size: 1.2rem;
+  }
 }
 
 .cta__btn:link,
@@ -177,7 +362,101 @@ button {
   transition: background 0.5s;
 }
 
+@media only screen and (max-width: 767px) {
+  .cta__btn:link,
+  .cta__btn:visited {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cta__btn:link,
+  .cta__btn:visited {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
 .cta__btn:hover,
 .cta__btn:active {
   background: var(--yellow-2);
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 414px) {
+  .menu-container {
+    display: block;
+  }
+
+  .menu-container.active .menu-container__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    animation-fill-mode: both;
+    animation: change-background 0.5s ease-in alternate forwards;
+  }
+
+  .menu-container.active .menu-button__line {
+    background: #fff;
+    animation: show-in 1s ease-in forwards;
+  }
+}
+
+.menu-button {
+  background: transparent;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 414px) {
+  .menu-button {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.menu-button__line {
+  display: block;
+  height: 0.3rem;
+  width: 2.5rem;
+  background: var(--yellow-1);
+}
+
+.menu-button__line:nth-child(2) {
+  margin: 0.5rem 0;
+}
+
+@keyframes change-background {
+  0% {
+    background: var(--white);
+    width: 0%;
+  }
+  100% {
+    background: var(--yellow-1);
+    width: 200%;
+  }
+}
+
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

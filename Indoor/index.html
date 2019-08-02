@@ -13,31 +13,52 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <div class="product">
-          <img class="logo" src="img/logo.svg" />
-          <div class="product__image"></div>
-          <div class="navigation">
-            <button class="navigation__btn navigation__btn--prev">Prev</button>
-            <button class="navigation__btn navigation__btn--next">Next</button>
+      <div class="main" onclick="void(0)">
+        <div class="container">
+          <div class="product">
+            <img class="logo" src="img/logo.svg" />
+            <div class="product__image"></div>
+            <div class="navigation">
+              <button class="navigation__btn navigation__btn--prev">
+                Prev
+              </button>
+              <button class="navigation__btn navigation__btn--next">
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="content">
+            <div class="text-container">
+              <h1 class="title">
+                <span>Designer Chairs</span><span>for everyone</span>
+              </h1>
+              <p class="sub-title">
+                <span
+                  >A designer chair that offers more than just a design</span
+                >
+                <span> but gives a great comfort and durability.</span>
+              </p>
+              <a class="cta__btn" href="#">Learn more</a>
+            </div>
           </div>
         </div>
-        <div class="content">
-          <div class="menu-bar">
-            <ul class="menu">
-              <li class="menu__item"><a class="active" href="#">Home</a></li>
-              <li class="menu__item"><a href="#">About</a></li>
-              <li class="menu__item"><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <h1 class="title">Designer Chairs for everyone</h1>
-          <p class="sub-title">
-            <span>A designer chair that offers more than just a design</span>
-            <span> but gives a great comfort and durability.</span>
-          </p>
-          <a class="cta__btn" href="#">Learn more</a>
+        <div class="menu-bar">
+          <ul class="menu">
+            <li class="menu__item"><a class="active" href="#">Home</a></li>
+            <li class="menu__item"><a href="#">About</a></li>
+            <li class="menu__item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="menu-container">
+          <button class="menu-button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </button>
+          <div class="menu-container__background"></div>
         </div>
       </div>
     </header>
+    <script src="menu.js"></script>
   </body>
 </html>
