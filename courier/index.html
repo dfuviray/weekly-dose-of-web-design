@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Courier</title>
   </head>
@@ -33,23 +37,27 @@
             <li class="nav__item">
               <a class="nav__link" href="#">Branches</a>
             </li>
-            <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contact</a>
+            </li>
           </ul>
         </nav>
       </section>
 
-      <header class="hero">
-        <h1 class="hero__heading">
-          Worldwide shipping for all your shipping needs
-        </h1>
-        <p class="hero__subheading">
-          We delivery your shipping in any location of the world. Fast, secured
-          and right in front of your door.
-        </p>
-        <button class="btn hero__btn">Learn more</button>
-      </header>
+      <div class="hero-wrap">
+        <header class="hero">
+          <h1 class="hero__heading">
+            Worldwide shipping for all your shipping needs
+          </h1>
+          <p class="hero__subheading">
+            We delivery your shipping in any location of the world. Fast,
+            secured and right in front of your door.
+          </p>
+          <button class="btn hero__btn">Learn more</button>
+        </header>
 
-      <div class="hero-image"></div>
+        <div class="hero-image"></div>
+      </div>
 
       <section class="service">
         <h2 class="service__heading">Our services to your shipping needs</h2>
@@ -133,55 +141,53 @@
 
         <div class="customers">
           <div class="customer">
+            <div class="customer__info">
+              <div class="customer__image"></div>
+              <p class="customer__name">Verney S.</p>
+            </div>
             <blockquote class="customer__message">
               "After using courier my business skyrocketed! I was amazed at the
               quality of courier. We've seen amazing results already. I like
               courier more and more each day because it makes my life a lot
               easier."
             </blockquote>
-            <div class="customer__info">
-              <div class="customer__image"></div>
-              <p class="customer__name">Verney S.</p>
-            </div>
           </div>
 
           <div class="customer">
-            <blockquote class="customer__message">
-              "Courier saved my business. Courier impressed me on multiple
-              levels. I would like to personally thank you for your outstanding
-              service."
-            </blockquote>
             <div class="customer__info">
               <div class="customer__image"></div>
-              <p class="customer__name">Claresta A.</p>
+              <p class="customer__name">Anetta D.</p>
             </div>
+            <blockquote class="customer__message">
+              "It's the perfect solution for our business. It's really
+              wonderful. We can't understand how we've been living without
+              courier."
+            </blockquote>
           </div>
         </div>
 
         <div class="customers">
           <div class="customer">
-            <blockquote class="customer__message">
-              "After using courier my business skyrocketed! I was amazed at the
-              quality of courier. We've seen amazing results already. I like
-              courier more and more each day because it makes my life a lot
-              easier."
-            </blockquote>
             <div class="customer__info">
               <div class="customer__image"></div>
-              <p class="customer__name">Verney S.</p>
+              <p class="customer__name">Candie Z..</p>
             </div>
+            <blockquote class="customer__message">
+              "I couldn't have asked for more than this. I would like to
+              personally thank you for your outstanding product."
+            </blockquote>
           </div>
 
           <div class="customer">
+            <div class="customer__info">
+              <div class="customer__image"></div>
+              <p class="customer__name">Claresta A.</p>
+            </div>
             <blockquote class="customer__message">
               "Courier saved my business. Courier impressed me on multiple
               levels. I would like to personally thank you for your outstanding
               service."
             </blockquote>
-            <div class="customer__info">
-              <div class="customer__image"></div>
-              <p class="customer__name">Claresta A.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -190,16 +196,19 @@
         <h1 class="track-package__title">
           Track your package. simple and fast
         </h1>
-        <button class="btn track-package__btn">Track now</button>
+        <div class="track-package__search">
+          <input class="track-package__input" type="text" />
+          <button class="btn track-package__btn">Track now</button>
+        </div>
       </div>
 
       <footer>
         <img class="logo" src="assets/img/logo.svg" alt="logo" />
 
         <div class="social-media">
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
+          <a class="social-media__link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a class="social-media__link" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+          <a class="social-media__link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
         </div>
       </footer>
     </div>
