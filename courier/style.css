@@ -189,7 +189,8 @@ blockquote {
 }
 
 .burger-nav__icon {
-  width: 3.2rem;
+  width: 100%;
+  height: 3.2rem;
   fill: var(--white-1);
 }
 
@@ -206,7 +207,7 @@ blockquote {
   background: var(--white-1);
   z-index: 11111;
   transform: translate3d(-100%, 0, 0);
-  transition: all 0.5s cubic-bezier(0.61, 0.03, 0, 1.83);
+  transition: transform 0.5s cubic-bezier(0.61, 0.03, 0, 1.83);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -475,8 +476,10 @@ blockquote {
 
 .service-category svg {
   height: 9.6rem;
+  width: 9.6rem;
   margin-bottom: var(--margin-2);
 }
+
 @media only screen and (min-width: 1024px) {
   .service-category svg {
     width: 100%;
@@ -525,6 +528,10 @@ blockquote {
 
 .customers:first-of-type {
   margin-bottom: var(--margin-8);
+}
+
+.customer__info {
+  margin-bottom: var(--margin-3);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -696,5 +703,11 @@ footer {
   color: var(--white-1);
   text-align: center;
   line-height: 4rem;
-  margin-left: var(--margin-2);
+  margin-left: var(--margin-1);
+}
+
+@media only screen and (min-width: 768px) {
+  .social-media .social-media__link {
+    margin-left: var(--margin-2);
+  }
 }
