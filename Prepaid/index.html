@@ -30,16 +30,16 @@
           <a class="nav-bar__logo-link" href="#">
             <img class="nav-bar__logo" src="assets/img/logo.svg" alt="logo" />
           </a>
-          <div class="menu">
+          <nav class="menu">
             <ul>
               <li class="menu__items"><a href="#">Home</a></li>
               <li class="menu__items"><a href="#">Features</a></li>
               <li class="menu__items"><a href="#">Shop</a></li>
               <li class="menu__items"><a href="#">About</a></li>
+              <li class="menu__items"><a href="#">Contact</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
-        
 
         <div class="hero">
           <div class="hero-text">
@@ -61,122 +61,130 @@
         <h2 class="section__title">Why Prepaid</h2>
         <p class="section__subtitle">
           Proin nunc lorem, bibendum eu sem sit amet, varius fringilla nibh.
-          Phasellus accumsan ipsum et odio pulvinar, nec volutpat sem interdum
+          Phasellus accumsan ipsum et odio pulvinar
         </p>
 
-        <a class="features__link" href="#">
+        <div class="features-items">
           <div class="features__container">
-            <div class="features__icon-container">
-              <img class="features__icon-image" src="assets/icons/wallet.svg" />
-            </div>
-            <p class="features__title">Allocate Cash</p>
-            <p class="features__subtitle">
-              Morbi maximus nunc turpis, at maximus augue placerat eget. Orci
-              varius natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus morbi ex nisi facilisise
-            </p>
+            <a class="features__link" href="#">
+              <div class="features__icon-container">
+                <img
+                  class="features__icon-image"
+                  src="assets/icons/wallet.svg"
+                />
+              </div>
+              <p class="features__title">Allocate Cash</p>
+              <p class="features__subtitle">
+                Morbi maximus nunc turpis, at maximus augue placerat eget. Orci
+                varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus morbi ex nisi facilisise
+              </p>
+            </a>
           </div>
-        </a>
 
-        <a class="features__link" href="#">
           <div class="features__container">
-            <div class="features__icon-container">
-              <img
-                class="features__icon-image"
-                src="assets/icons/credit-card.svg"
-              />
-            </div>
-            <p class="features__title">Pay your bills</p>
-            <p class="features__subtitle">
-              Nam felis ipsum, semper in placerat luctus, porta eget lacus.
-              Curabitur quis fringilla risus. Pellentesque viverra venenatis
-              egestas. Quisque ornare sapien eget lacinia
-            </p>
+            <a class="features__link" href="#">
+              <div class="features__icon-container">
+                <img
+                  class="features__icon-image"
+                  src="assets/icons/credit-card.svg"
+                />
+              </div>
+              <p class="features__title">Pay your bills</p>
+              <p class="features__subtitle">
+                Nam felis ipsum, semper in placerat luctus, porta eget lacus.
+                Curabitur quis fringilla risus. Pellentesque viverra venenatis
+                egestas. Quisque ornare sapien eget lacinia
+              </p>
+            </a>
           </div>
-        </a>
 
-        <a class="features__link" href="#">
           <div class="features__container">
-            <div class="features__icon-container">
-              <img
-                class="features__icon-image"
-                src="assets/icons/currency-dollar.svg"
-              />
-            </div>
-            <p class="features__title">Send & Receive money</p>
-            <p class="features__subtitle">
-              Curabitur dolor nunc, rhoncus vel consectetur ut, aliquet eget
-              sapien. In consequat a lacus et dignissim. Praesent a finibus
-              nisl. Pellentesque elit est, ultrices auctor
-            </p>
+            <a class="features__link" href="#">
+              <div class="features__icon-container">
+                <img
+                  class="features__icon-image"
+                  src="assets/icons/currency-dollar.svg"
+                />
+              </div>
+              <p class="features__title">Send, Receive Cash</p>
+              <p class="features__subtitle">
+                Curabitur dolor nunc, rhoncus vel consectetur ut, aliquet eget
+                sapien. In consequat a lacus et dignissim. Praesent a finibus
+                nisl. Pellentesque elit est, ultrices auctor
+              </p>
+            </a>
           </div>
-        </a>
 
-        <a class="features__link" href="#">
           <div class="features__container">
-            <div class="features__icon-container">
-              <img
-                class="features__icon-image"
-                src="assets/icons/shopping-cart.svg"
-              />
-            </div>
-            <p class="features__title">Shop Online</p>
-            <p class="features__subtitle">
-              Etiam dignissim felis ut est imperdiet elementum. In sodales risus
-              a tincidunt lacinia. Duis laoreet viverra lectus, ut placerat
-              ligula lacinia id etiam aliquam faucibus
-            </p>
+            <a class="features__link" href="#">
+              <div class="features__icon-container">
+                <img
+                  class="features__icon-image"
+                  src="assets/icons/shopping-cart.svg"
+                />
+              </div>
+              <p class="features__title">Shop Online</p>
+              <p class="features__subtitle">
+                Etiam dignissim felis ut est imperdiet elementum. In sodales
+                risus a tincidunt lacinia. Duis laoreet viverra lectus, ut
+                placerat ligula lacinia id etiam aliquam faucibus
+              </p>
+            </a>
           </div>
-        </a>
+        </div>
       </section>
 
       <section class="registration bg-dark">
         <h2 class="section__title">Quick Registration</h2>
         <p class="section__subtitle">
           Pellentesque condimentum pulvinar libero, vitae tempor nulla auctor
-          in. Cras neque ipsum, vulputate vitae justo eu, efficitur eleifend
-          lorem
+          in. Cras neque ipsum, vulputate vitae justo eu
         </p>
 
+        <div class="step-items">
         <div class="step-container">
+          <div>
           <div class="step-number">
             <span>1</span>
           </div>
+        </div>
           <div class="step-content">
             <p class="step-content__title">Register</p>
             <p class="step-content__subtitle">
               Donec quis tristique odio. Aliquam erat volutpat. Aliquam pulvinar
-              justo vitae convallis convallis. Suspendisse et augue ac nibh
-              consequat pulvinar
+              justo vitae convallis convallis
             </p>
           </div>
         </div>
         <div class="step-container">
+            <div>
           <div class="step-number">
             <span>2</span>
           </div>
+            </div>
           <div class="step-content">
             <p class="step-content__title">Approval</p>
             <p class="step-content__subtitle">
               Vestibulum varius nisl eu ligula iaculis, quis mollis felis
-              porttitor. Donec laoreet mauris sit amet scelerisque dapibus Ut
-              volutpat vehicula
-            </p>
+              porttitor. Donec laoreet mauris sit amet scelerisque
           </div>
         </div>
         <div class="step-container">
+            <div>
           <div class="step-number">
             <span>3</span>
           </div>
+        </div>
           <div class="step-content">
             <p class="step-content__title">Ready to Use</p>
             <p class="step-content__subtitle">
               Nullam orci lorem, sodales vel eros id, fermentum ornare sem. Duis
-              neque sapien, semper sit amet dolor sit amet, elementum posuere
-              tortor
+              neque sapien
             </p>
           </div>
         </div>
+      </div>
       </section>
 
       <section class="feedback bg-light">
@@ -240,7 +248,7 @@
             <ul>
               <li>Application</li>
               <li><a class="footer__link" href="#">Documentation</a></li>
-              <li><a class="footer__link" href="#">Terms & Condition</a></li>
+              <li><a class="footer__link" href="#">Privacy Policy</a></li>
               <li><a class="footer__link" href="#">Download</a></li>
               <li><a class="footer__link" href="#">Update</a></li>
               <li><a class="footer__link" href="#">API</a></li>
